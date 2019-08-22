@@ -1,0 +1,14 @@
+primeserie = []
+count = 0
+for number in range(2,1000000):
+    isPrimenumber = True
+    for i in range(2,int(number ** 0.5) + 1):
+        if number % i == 0:
+            isPrimenumber = False
+            break
+    if isPrimenumber:
+        primeserie.append(number)
+        count = count+1
+        if count == 1000:
+            break
+print(primeserie)
